@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/main.css" rel="stylesheet" type="text/css" />
+    <title>res.render() PaSE Tracker</title>
+  </head>
+  <body>
+    <div class="title"><span>P</span>aSE <br />covid tracker</div>
+
+    <div class="global-data-div">
+      <ul class="global-data">
+        <li>
+          Total Cases
+          <p></p>
+        </li>
+        <li>
+          Total Active
+          <p></p>
+        </li>
+        <li>
+          Recoveries
+          <p></p>
+        </li>
+
+        <li>
+          Deaths
+          <p></p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="country-table">
+      <table>
+        <tr>
+          <th>Countries</th>
+          <th>Confirmed Cases</th>
+          <th>Active Cases</th>
+          <th>Recoveries</th>
+          <th>Deaths</th>
+        </tr>
+
+        <tbody id="tdata" class="stripped-table"></tbody>
+        <% data.forEach(function(obj){ %>
+        <tr>
+          <td><%=obj.Country_Region%></td>
+          <td><%=obj.Confirmed%></td>
+          <td><%=obj.Active%></td>
+          <td><%=obj.Recovered%></td>
+          <td><%=obj.Deaths%></td>
+        </tr>
+        <%})%>
+      </table>
+    </div>
+
+    <div class="aside-here">
+      <aside class="sidenotes">
+        <ul>
+          <li class="healthtips">
+            <h2>Health Tips</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Aspernatur consequuntur expedita totam quidem unde molestias
+              sapiente qui quos consequatur velit facilis repellat
+              exercitationem obcaecati suscipit ex delectus nemo sit inventore,
+              non aperiam voluptatem neque fuga? Corporis pariatur facere illum
+              aperiam ullam ad inventore, ex dolor mollitia esse non corrupti
+              minima!
+            </p>
+          </li>
+          <li class="news-update">
+            <h2>News Updates</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Aspernatur consequuntur expedita totam quidem unde molestias
+              sapiente qui quos consequatur velit facilis repellat
+              exercitationem obcaecati suscipit ex delectus nemo sit inventore,
+              non aperiam voluptatem neque fuga? Corporis pariatur facere illum
+              aperiam ullam ad inventore, ex dolor mollitia esse non corrupti
+              minima!
+            </p>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </body>
+</html>
